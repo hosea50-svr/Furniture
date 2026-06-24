@@ -1,0 +1,64 @@
+@media (max-width:768px){
+
+    .hero{
+        text-align:center;
+    }
+
+    .hero h1{
+        font-size:2.4rem;
+    }
+
+    .hero p{
+        font-size:1rem;
+    }
+
+    .hero .btn{
+        width:100%;
+        margin-bottom:15px;
+    }
+}
+
+.hero{
+    background-image: url("../furniture-images/image-2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-overlay{
+    background: rgba(0,0,0,.55);
+}
+
+.hero h1{
+    line-height:1.2;
+}
+
+.hero .btn{
+    border-radius:50px;
+    padding:12px 28px;
+}
+
+.category-card{
+    transition: all .3s ease;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.category-card img{
+    height: 250px;
+    object-fit: cover;
+    transition: transform .4s ease;
+}
+
+.category-card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0,0,0,.15);
+}
+
+.category-card:hover img{
+    transform: scale(1.08);
+}
+
+.category-card .btn{
+    border-radius: 30px;
+}

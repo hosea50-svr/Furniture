@@ -1,0 +1,48 @@
+{% extends 'base.html' %} 
+{% block content %}
+
+<div class="container p-3">
+  <div class="row">
+    {% for product in products %}
+
+    <div class="col-lg-3 col-md-4 mb-2">
+      <div class="card h-100">
+        <img
+          src="{{ product.image.url }}"
+          class="card-img-top"
+          alt="{{ product.name }}"
+          style="height: 250px; object-fit: cover;"
+        />
+
+        <div class="card-body">
+          <h5>{{ product.name }}</h5>
+
+          <p class="fw-bold">₦{{ product.price }}</p>
+
+          <p>Color: {{ product.color }}</p>
+
+          <p>Material: {{ product.material }}</p>
+
+          <a href="#" class="btn btn-dark w-100"> Order </a>
+        </div>
+      </div>
+    </div>
+
+    {% empty %}
+
+    <p>No products found.</p>
+
+    {% endfor %}
+  </div>
+
+{% endblock content %}
+{% comment %}
+  
+  <a
+    href="https://wa.me/2348012345678?text=Hello,%20I'm%20interested%20in%20{{ product.name }}"
+    class="btn btn-success w-100"
+  >
+    Order on WhatsApp
+  </a>
+{% endcomment %}
+

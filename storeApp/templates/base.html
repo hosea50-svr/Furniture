@@ -1,0 +1,133 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Furniture</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{% static 'css/css/bootstrap.min.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/base.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/header.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/home.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/hero.css' %}" />
+
+    
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark shadow-sm">
+      <div class="container-fluid px-3">
+        <a class="navbar-brand text-warning" href="/">
+          <img
+            src="{% static 'furniture-images/logo-main.png' %}"
+            alt="Logo"
+            width="50"
+            height="50"
+            class="logo"
+          >    
+          Salisu Luxury <span class="text-primary">Interior</span>
+        </a>
+        <form class="d-flex me-3" method="GET" action="#">
+          <input
+            class="form-control me-2 mb-2 mb-lg-0"
+            type="search"
+            name="q"
+            placeholder="Search furniture..."
+            value="{{ request.GET.q }}"
+          />
+          <button class="btn btn-outline-dark mb-2 mb-lg-0" type="submit">Search</button>
+        </form>
+        <button
+          class="navbar-toggler bg-white"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link text-white" href="/">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link text-white" href="/about">About</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link text-white" href="/contact">Contact</a>
+            </li>
+
+            <li class="nav-item ms-lg-3">
+              <a class="btn btn-success" href="https://wa.me/2348012345678">
+                WhatsApp
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    {% block content %} {% endblock %}
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-left">
+          <img 
+            src="{% static 'furniture-images/logo-main.png' %}"
+            alt="Logo"
+            width="50"
+            height="50"
+            class="logo"
+          >
+          <p>Luxury Iteriors. Make Every Space Beautiful </p>
+        </div>
+
+        <div class="footer-links">
+          <Link to="/">Home</Link>
+          <Link to="/contact">Contact</Link>
+          <Link to="/about"> About</Link>
+        </div>
+
+        <div class="footer-right">
+          <p>Follow us</p>
+          <div class="socials">
+            <a 
+              href="https://www.facebook.com/"
+              target="_blank"
+              rel="noopener noreferrer"           
+            ><i class="bi bi-facebook m-2 text-primary"></i></a>
+
+            <a href=""><i class="bi bi-instagram m-2 text-warning"></i></a>
+
+            <a href="https://wa.me/"
+              target="_blank"
+              rel="noopener noreferrer"
+            ><i class="bi bi-whatsapp m-2 text-success"></i></a>
+
+            <a href=""><i class="bi bi-twitter-x m-2"></i></a>
+
+            <a href="https://www.youtube.com/">
+              <i class="bi bi-youtube m-2 text-danger"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>© Salisu <span id="year"></span>. All rights reserved.</p>
+      </div>
+
+    </footer>
+
+    <script src="{% static 'css/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'css/js/base.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

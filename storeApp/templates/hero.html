@@ -1,0 +1,142 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<section class="hero">
+    <div class="hero-overlay">
+        <div class="container">
+
+            <div class="row align-items-center min-vh-100">
+
+                <div class="col-lg-6">
+
+                    <h1 class="display-3 fw-bold text-white">
+                       <span class="text-primary">Salisu</span> Luxury Furniture for Every Home
+                    </h1>
+
+                    <p class="lead text-light mt-4">
+                        Transform your living space with beautifully crafted
+                        sofas, beds, wardrobes, dining tables and more.
+                    </p>
+
+                    <div class="mt-4">
+
+                        <a href="#" class="btn btn-warning btn-lg me-3">
+                            Shop Now
+                        </a>
+
+                        <a href="https://wa.me/234XXXXXXXXXX"
+                           class="btn btn-success btn-lg">
+                            WhatsApp
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="py-5 bg-light">
+    <div class="container">
+
+        <div class="text-center mb-5">
+            <h2 class="fw-bold">Shop by Category</h2>
+            <p class="text text-warning">
+                Discover furniture for every room in your home.
+            </p>
+        </div>
+
+        <div class="row g-4">
+
+            <!-- Sofa -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card category-card shadow-sm border-0 h-100">
+                    <img src="{% static 'categories-images/sofa.jpg' %}" class="card-img-top" alt="Sofas">
+
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Sofas</h5>
+                        <a href="{% url 'category_products' 'sofa' %}" class="btn btn-outline-dark mt-2">
+                            View Collection
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Beds -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card category-card shadow-sm border-0 h-100">
+                    <img src="{% static 'categories-images/bed.jpg' %}" class="card-img-top" alt="Beds">
+
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Beds</h5>
+                        <a href="{% url 'category_products' 'bed' %}" class="btn btn-outline-dark mt-2">
+                            View Collection
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dining -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card category-card shadow-sm border-0 h-100">
+                    <img src="{% static 'categories-images/dinning.jpg' %}" class="card-img-top" alt="Dining Sets">
+
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Dining Sets</h5>
+                        <a href="{% url 'category_products' 'dining' %}" class="btn btn-outline-dark mt-2">
+                            View Collection
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Wardrobes -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card category-card shadow-sm border-0 h-100">
+                    <img src="{% static 'categories-images/wardrobe.jpg' %}" class="card-img-top" alt="Wardrobes">
+
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Wardrobes</h5>
+                        <a href="{% url 'category_products' 'wardrobe' %}" class="btn btn-outline-dark mt-2">
+                            View Collection
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TV Stands -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card category-card shadow-sm border-0 h-100">
+                    <img src="{% static 'categories-images/tv-stand.jpg' %}" class="card-img-top" alt="TV Stands">
+
+                    <div class="card-body text-center">
+                        <h5 class="card-title">TV Stands</h5>
+                        <a href="{% url 'category_products' 'tv-stand' %}" class="btn btn-outline-dark mt-2">
+                            View Collection
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Office -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card category-card shadow-sm border-0 h-100">
+                    <img src="{% static 'categories-images/office.jpg' %}" class="card-img-top" alt="Office Furniture">
+
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Office Furniture</h5>
+                        <a href="{% url 'category_products' 'office' %}" class="btn btn-outline-dark mt-2">
+                            View Collection
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+{% endblock content %}
