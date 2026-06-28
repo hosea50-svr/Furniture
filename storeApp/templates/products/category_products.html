@@ -7,12 +7,14 @@
 
     <div class="col-lg-3 col-md-4 mb-2">
       <div class="card h-100">
-        <img
-          src="{{ product.image.url }}"
-          class="card-img-top"
-          alt="{{ product.name }}"
-          style="height: 250px; object-fit: cover;"
-        />
+        <a href="{% url 'product_detail' product.id %}" class="text-decoration-none text-dark">
+            <img
+              src="{{ product.image.url }}"
+              class="card-img-top"
+              alt="{{ product.name }}"
+              style="height: 250px; object-fit: cover;"
+            />
+        </a>
 
         <div class="card-body">
           <h5>{{ product.name }}</h5>
@@ -23,7 +25,9 @@
 
           <p>Material: {{ product.material }}</p>
 
-          <a href="#" class="btn btn-dark w-100"> Order </a>
+          <a href="{% url 'add_to_order' product.id %}" class="btn btn-dark w-100">
+              Add to Order
+          </a>
         </div>
       </div>
     </div>

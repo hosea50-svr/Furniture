@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container py-5">
+
+    <h2 class="mb-4">My Order</h2>
+
+    {% if products %}
+
+        {% for item in products %}
+
+        <div class="card mb-3 p-3">
+
+            <div class="row align-items-center">
+
+                <div class="col-md-2">
+                    <img src="{{ item.product.image.url }}"
+                         class="img-fluid rounded">
+                </div>
+
+                <div class="col-md-5">
+                    <h5>{{ item.product.name }}</h5>
+                </div>
+
+                <div class="col-md-2">
+                    <!-- Qty: {{ item.quantity }} -->
+                     <div class="d-flex align-items-center">
+
+                    <a href="{% url 'decrease_quantity' item.product.id %}"
+                    class="btn btn-outline-secondary btn-sm">
+                        -
+                    </a>
+
+                    <span class="mx-3 fw-bold">
+                        {{ item.quantity }}
+                    </span>
+
+                    <a href="{% url 'increase_quantity' item.product.id %}"
+                    class="btn btn-outline-success btn-sm">
+                        +
+                    </a>
+
+                </div>
+                </div>
+
+                <div class="col-md-3">
+                    ₦{{ item.subtotal }}
+                    <a href="{% url 'remove_item' item.product.id %}"
+                    class="btn btn-outline-danger">
+                        🗑
+                    </a>
+                </div>
+                <div>
+                    
+                </div>
+            </div>
+
+        </div>
+
+        {% endfor %}
+
+        <h3>Total: ₦{{ total }}</h3>
+
+        <a href="{% url 'order_whatsapp' %}" class="btn btn-success mt-3">
+            <i class="bi bi-whatsapp"></i> Order via WhatsApp
+        </a>
+        <button onclick="history.back()" class="btn btn-outline-dark mt-3">
+            ← Continue Shopping
+        </button>
+
+    {% else %}
+
+        <h4>Your order list is empty.</h4>
+
+    {% endif %}
+
+</div>
+
+{% endblock %}

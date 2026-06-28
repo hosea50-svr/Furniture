@@ -94,6 +94,9 @@ body{
     border-radius:15px;
     transition:.4s;
 }
+.card h3{
+    color: rgb(39, 228, 39);
+}
 
 .card:hover{
     transform:translateY(-15px);
@@ -120,6 +123,9 @@ body{
     width:0;
     background:rgb(39, 228, 39);
     border-radius:20px;
+}
+.green{
+    color: rgb(39, 228, 39);
 }
 
 #topBtn{
