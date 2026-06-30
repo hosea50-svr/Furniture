@@ -8,13 +8,77 @@ p {
   margin: 0;
 }
 
+.cart-icon{
+    position: relative;
+    display: inline-block;
+}
+.cart-count:hover{
+  background-color: rgb(16, 192, 16);
+}
+
+.cart-count{
+    position: absolute;
+    top: -8px;
+    right: -10px;
+
+    width: 20px;
+    height: 20px;
+
+    background: red;
+    color: white;
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 12px;
+    font-weight: bold;
+}
+.cart-icon img {
+    transition: transform .3s ease;
+}
+
+.cart-icon:hover img {
+    transform: scale(1.1);
+}
+.cart-count{
+    box-shadow: 0 0 8px rgba(255,0,0,.4);
+}
+.cart-count{
+    animation: pop .4s ease;
+}
+
+@keyframes pop{
+    0%{
+        transform: scale(0);
+    }
+    80%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+.nav-link.active {
+    color: #ffc107 !important; /* Gold */
+    font-weight: bold;
+    border-bottom: 2px solid #ffc107;
+}
+
+.nav-link:hover {
+    color: #ffc107 !important;
+}
+
 .logo{
   border-radius: 100%;
-  box-shadow: 2px 2px 9px white;
+  /* box-shadow: 2px 2px 9px white; */
   margin-bottom: 2px;
 }
 .logo:hover{
-  box-shadow: 2px 2px 9px gold;
+  /* box-shadow: 2px 2px 9px gold;/ */
 }
 button {
   font-size: 14px;
