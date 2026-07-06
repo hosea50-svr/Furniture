@@ -1,15 +1,14 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% block content %}
-
+<link rel="stylesheet" href="{% static 'css/product_detail.css' %}">
 <div class="container  p-3">
     <div class="row p-2">
 
         <!-- Product Image -->
         <div class="col-md-8 ">
             <img src="{{ product.image.url }}"
-                 class=" rounded shadow  w-100 "
-                 style="height: 100vh; width: 100%;"
+                 class=" rounded shadow  w-100 product-img"
                  alt="{{ product.name }}">
         </div>
 
@@ -33,7 +32,7 @@
             </p>
 
             <div class="mt-4">
-                <button class="btn btn-warning btn-lg">
+                <button class="btn btn-primary btn-lg">
                     Add to Cart
                 </button>
 

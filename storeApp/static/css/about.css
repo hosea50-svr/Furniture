@@ -1,19 +1,14 @@
 *{
     margin:0;
     padding:0;
-    box-sizing:border-box;
+    /* box-sizing:border-box; */
 }
-.container{
-    background-color: whitesmoke;
-    /* color: black; */
-}
+
 body{
     font-family:Arial, sans-serif;
 }
 
-.services{
-    color: white;
-}
+
 .hero{
     height:100vh;
     background:url("../furniture-images/image-2.jpg") center/cover;
@@ -54,6 +49,8 @@ body{
     display:flex;
     gap:40px;
     align-items:center;
+    background-color: black;
+
 }
 
 .about img{
@@ -74,26 +71,29 @@ body{
     text-align:center;
 }
 
+.cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 20px;
+}
 .stat-box h2{
     color:rgb(87, 87, 255);
     font-size:3rem;
 }
+.success{
+    background:black;
 
-.cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:30px;
-    padding:50px;
 }
 
 .card{
-    width:100%;
-    padding:40px;
     text-align:center;
     box-shadow:0 10px 30px rgba(0,0,0,.1);
-    border-radius:15px;
     transition:.4s;
-}
+    height: 120px;
+    background-color: black;
+    width: auto;
+
+} 
 .card h3{
     color: rgb(39, 228, 39);
 }
@@ -120,7 +120,7 @@ body{
 
 .progress-bar{
     height:100%;
-    width:0;
+    width:auto;
     background:rgb(39, 228, 39);
     border-radius:20px;
 }
@@ -156,17 +156,7 @@ body{
     animation:float 6s infinite ease-in-out;
 }
 
-.sofa{
-    left:20px;
-    top:40%;
-}
-
-.chair{
-    right:20px;
-    top:60%;
-}
-
-/* @keyframes float{
+@keyframes float{
 
     0%{
         transform:translateY(0);
@@ -180,4 +170,4 @@ body{
         transform:translateY(0);
     }
 
-} */
+}

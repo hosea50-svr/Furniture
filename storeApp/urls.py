@@ -17,10 +17,13 @@ urlpatterns = [
 
     path("remove-item/<int:id>/", views.remove_item, name="remove_item"),
 
+    path("reset-cart/", views.reset_cart, name="reset_cart"),
+
     path("increase/<int:id>/", views.increase_quantity, name="increase_quantity"),
     path("decrease/<int:id>/", views.decrease_quantity, name="decrease_quantity"),
 
     path("order-whatsapp/", views.order_whatsapp, name="order_whatsapp"),
+
     ]
 
 if settings.DEBUG:

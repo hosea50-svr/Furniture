@@ -1,144 +1,131 @@
-{% extends "base.html" %}
-{% load static %}
-{% block content %}
-    <link rel="stylesheet" href="{% static 'css/about.css' %}">
+{% extends "base.html" %} {% load static %} {% block content %}
 
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    >
+<link rel="stylesheet" href="{% static 'css/about.css' %}" />
 
-<!-- HERO -->
-<div class="container mt-1 p-0">
-<section class="hero">
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+/>
+
+<div class="container mt-1 p-0 shadow">
+  <section class="hero">
     <div class="overlay"></div>
 
     <div class="hero-content">
-        <h1>About <span>Salisu Luxury Interior</span></h1>
+      <h1><span class="text-primary">About</span> <span>Salisu Luxury Interior</span></h1>
 
-        <h2>
-            We Create
-            <span id="changing-text">Luxury Furniture</span>
-        </h2>
+      <h2>
+        We Create
+        <span id="changing-text">Luxury Furniture</span>
+      </h2>
 
-        <p>
-            Crafting elegant furniture that transforms houses into homes.
-        </p>
-        
+      <p>Crafting elegant furniture that transforms houses into homes.</p>
     </div>
-</section>
+  </section>
 
-<!-- ABOUT -->
+  <!-- ABOUT -->
 
-<section class="about reveal">
+  <section class="about reveal border mt-1 border-dark">
+    <div class="about-content text-white">
+      <h2 class="text-primary text-center">Who We Are</h2>
+      <hr />
 
-    <div class="about-content ">
-        <h2 class="text-warning">Who We Are</h2>
+      <p>
+        Salisu Luxury Interior specializes in handcrafted furniture, interior
+        decoration and modern home solutions.
+      </p>
 
-        <p>
-            Salisu Luxury Interior specializes in handcrafted furniture,
-            interior decoration and modern home solutions.
-        </p>
-
-        <p>
-            We combine creativity, comfort and durability to create furniture
-            that lasts generations.
-        </p>
+      <p>
+        We combine creativity, comfort and durability to create furniture that
+        lasts generations.
+      </p>
     </div>
-</section>
+  </section>
 
-<!-- COUNTERS -->
+  <!-- COUNTERS -->
 
-<section class="stats ">
-
-    <div class="stat-box">
-        <h2 class="counter text-warning" data-target="500">0</h2>
+  <section class="container bg-primary border p-5 border-dark">
+    <div class="cards p-3 border success">
+      <div class="card p-2 m-2 bg-warning border border-danger">
+        <h2 class="counter" data-target="500">0</h2>
         <p>Projects</p>
-    </div>
+      </div>
 
-    <div class="stat-box">
-        <h2 class="counter text-warning" data-target="1200">0</h2>
+      <div class="card p-2 m-2 bg-warning border">
+        <h2 class="counter" data-target="1200">0</h2>
         <p>Happy Clients</p>
-    </div>
+      </div>
 
-    <div class="stat-box">
-        <h2 class="counter text-warning" data-target="15">0</h2>
+      <div class="card p-2 m-2 bg-warning border border-danger">
+        <h2 class="counter" data-target="15">0</h2>
         <p>Years Experience</p>
+      </div>
     </div>
+  </section>
 
-</section>
-
-<!-- SERVICES -->
-<div class="container p-5">
-<section class="services reveal">
-
-    <h2 class="text-dark text-center">What We Do</h2>
-
-    <div class="cards">
-
-        <div class="card">
+  <!-- SERVICES -->
+  <div class="container p-5 bg-primary border border-dark">
+    <section>
+      <h2 class="text-dark text-center border p-3">What We Do</h2>
+      <div class="container border mb-1 p-2">
+        <div class="cards">
+          <div class="card p-2 m-2">
             <i class="fas fa-couch"></i>
             <h3>Luxury Sofas</h3>
-        </div>
-        <div class="card">
+          </div>
+          <div class="card p-2 m-2">
             <i class="fas fa-table"></i>
             <h3>Dinning set</h3>
-        </div>
-        <div class="card">
+          </div>
+          <div class="card p-2 m-2">
             <i class="fas fa-briefcase"></i>
             <h3>Office Set</h3>
-        </div>
-        <div class="card">
-            <i class="fas fa-tv"></i>
-            <h3>Tv Stands</h3>
+          </div>
         </div>
 
-        <div class="card">
-            <i class="fas fa-chair"></i>
-            <h3>Modern Chairs</h3>
+        <div class="container mb-1 p-2">
+          <div class="cards">
+            <div class="card p-2 m-2">
+              <i class="fas fa-tv"></i>
+              <h3>Tv Stands</h3>
+            </div>
+
+            <div class="card p-2 m-2">
+              <i class="fas fa-chair"></i>
+              <h3>Modern Chairs</h3>
+            </div>
+
+            <div class="card p-2 m-2">
+              <i class="fas fa-bed"></i>
+              <h3>Bedroom Sets</h3>
+            </div>
+          </div>
         </div>
+      </div>
+    </section>
 
-        <div class="card">
-            <i class="fas fa-bed"></i>
-            <h3>Bedroom Sets</h3>
-        </div>
-
-    </div>
-</div>
-
-</section>
-
-<!-- SKILLS -->
-
-<section class="skills reveal">
-
-    <h2>Our Expertise</h2>
-
-    <div class="skill">
-
+    <section class="skills reveal border">
+      <h2>Our Expertise</h2>
+      <div class="skill">
         <p>Furniture Design</p>
-
         <div class="progress">
-            <div class="progress-bar" data-width="95%"></div>
+          <div class="progress-bar" data-width="95%"></div>
         </div>
+      </div>
 
-    </div>
-
-    <div class="skill">
-
+      <div class="skill">
         <p>Interior Decoration</p>
-
         <div class="progress">
-            <div class="progress-bar" data-width="90%"></div>
+          <div class="progress-bar" data-width="90%"></div>
         </div>
+      </div>
+    </section>
 
-    </div>
-
-</section>
-
-<button id="topBtn">
-    <i class="fas fa-arrow-up"></i>
-</button>
+    <button id="topBtn">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+  </div>
 </div>
-<script src={% static 'css/js/about.js' %}></script>
+<script src="{% static 'css/js/about.js' %}"></script>
 
 {% endblock content %}

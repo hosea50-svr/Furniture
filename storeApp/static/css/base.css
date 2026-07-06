@@ -74,11 +74,22 @@ p {
 
 .logo{
   border-radius: 100%;
-  /* box-shadow: 2px 2px 9px white; */
+  box-shadow: 2px 2px 9px  rgba(241, 239, 239, 0.2);
   margin-bottom: 2px;
 }
 .logo:hover{
-  /* box-shadow: 2px 2px 9px gold;/ */
+  transform: translateY(-5px);
+}
+.logo-footer{
+  animation: spin 5s linear infinite;
+}
+@keyframes spin{
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
 }
 button {
   font-size: 14px;

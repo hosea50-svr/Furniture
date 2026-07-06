@@ -1,10 +1,17 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block content %}
 
 <div class="container py-5">
-
-    <h2 class="mb-4">My Order</h2>
+    {% if products %}
+      <h2 class="mb-4 text-primary">
+        Cart-Items<i class="bi bi-heart-fill text-danger m-1"></i>
+    </h2>
+    {% else %}
+        <h2 class="mb-4 text-primary">
+        Empty Cart<i class="bi bi-heart-fill text-dark m-1"></i>
+    </h2>
+    {% endif %}
 
     {% if products %}
 
@@ -63,6 +70,17 @@
 
         <h3>Total: ₦{{ total }}</h3>
 
+        <div class="d-flex justify-content-end mt-4">
+
+            <a href="{% url 'reset_cart' %}"
+            class="btn btn-danger">
+
+                <i class="fas fa-trash"></i>
+                Reset Cart
+            </a>
+
+        </div>
+
         <a href="{% url 'order_whatsapp' %}" class="btn btn-success mt-3">
             <i class="bi bi-whatsapp"></i> Order via WhatsApp
         </a>
@@ -73,7 +91,16 @@
     {% else %}
 
         <h4>Your order list is empty.</h4>
-
+        <img src="{% static 'tools-image/empty-cart.png' %}" alt=""
+        style="
+        height: 300px;
+        width: auto;
+        "
+        >
+        <br>
+        <button onclick="history.back()" class="btn btn-outline-primary mt-3">
+            <i class="bi bi-arrow-left-circle-fill m-1"></i>Start Shopping
+        </button>
     {% endif %}
 
 </div>

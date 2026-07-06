@@ -113,7 +113,11 @@ def decrease_quantity(request, id):
 
     return redirect("order_list")
 
+def reset_cart(request):
+    request.session.pop("order", None)
+    return redirect("order_list")
 
+# WhatsApp set-up
 def order_whatsapp(request):
     order = request.session.get("order", {})
 
