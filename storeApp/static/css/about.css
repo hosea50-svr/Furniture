@@ -8,7 +8,10 @@ body{
     font-family:Arial, sans-serif;
 }
 
-
+.plus{
+    color: gray;
+    font-weight: bold;
+}
 .hero{
     height:100vh;
     background:url("../furniture-images/image-2.jpg") center/cover;

@@ -22,36 +22,31 @@ setInterval(() => {
 }, 2000);
 
 
-const counters =
-document.querySelectorAll('.counter');
+const counters = document.querySelectorAll(".counter");
 
 counters.forEach(counter => {
 
     const updateCounter = () => {
 
-        const target =
-        +counter.getAttribute('data-target');
+        const target = +counter.getAttribute("data-target");
 
-        const count =
-        +counter.innerText;
+        const count = parseInt(counter.innerText) || 0;
 
-        const increment =
-        target / 200;
+        const increment = target / 200;
 
-        if(count < target){
+        if (count < target) {
 
-            counter.innerText =
-            Math.ceil(count + increment);
+            counter.innerText = Math.ceil(count + increment) + "+";
 
             setTimeout(updateCounter, 10);
 
-        }else{
+        } else {
 
-            counter.innerText = target;
+            counter.innerHTML = `${target} <span class="plus">+</span>`;
 
         }
 
-    }
+    };
 
     updateCounter();
 

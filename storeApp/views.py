@@ -4,6 +4,9 @@ from . models import Product
 from django.http import HttpResponseRedirect
 from urllib.parse import quote
 
+from django.core.mail import send_mail
+from django.conf import settings
+
 # Create your views here.
 def hero(request):
     return render(request, 'hero.html')
@@ -149,3 +152,27 @@ def order_whatsapp(request):
     whatsapp_url = f"https://wa.me/{phone}?text={quote(message)}"
 
     return HttpResponseRedirect(whatsapp_url)
+
+
+
+
+def contact(request):
+    if request.method == "POST":
+        name = request.POST["name"]
+        email = request.POST["email"]
+        message = request.POST["message"]
+
+        full_message = f"""
+        Name: {name}
+        Email: {email}
+        Message: {message}
+        """
+
+        send_mail(
+            full_message,
+            settings.EMAIL_HOST_USER,
+            ["sm7399586@gmail.com"],
+            fail_silently=False,
+        )
+
+    return render(request, "contact.html")

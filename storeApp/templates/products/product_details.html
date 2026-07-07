@@ -15,7 +15,7 @@
         <!-- Product Details -->
         <div class="col-md-4 ">
 
-            <span class="badge bg-dark mb-3">
+            <span class="badge bg-danger mb-3 text-white mt-2">
                 {{ product.category }}
             </span>
 
@@ -32,9 +32,9 @@
             </p>
 
             <div class="mt-4">
-                <button class="btn btn-primary btn-lg">
-                    Add to Cart
-                </button>
+                <a href="{% url 'add_to_order' product.id %}" class="btn btn-primary btn-lg">
+                    Add to Order
+                </a>
 
                 <button onclick="history.back()" class="btn btn-outline-dark btn-lg ms-2">
                         <i class="bi bi-arrow-left-circle-fill m-1"></i>Back
@@ -46,4 +46,13 @@
     </div>
 </div>
 
+<script>
+  window.addEventListener("pageshow", function(event){
+    const nav = performance.getEntriesByType("navigation")[0];
+
+    if(event.persisted || (nav && nav.type === "back_forward")){
+      location.reload()
+    }
+  });
+</script>
 {% endblock %}
