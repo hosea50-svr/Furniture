@@ -14,7 +14,7 @@ body{
 }
 .hero{
     height:100vh;
-    background:url("../furniture-images/image-2.jpg") center/cover;
+    background:url("../categories-images/hero.webp") center/cover;
     position:relative;
     display:flex;
     justify-content:center;

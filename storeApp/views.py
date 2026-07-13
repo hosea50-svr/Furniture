@@ -156,19 +156,25 @@ def order_whatsapp(request):
 
 
 
+
 def contact(request):
     if request.method == "POST":
         name = request.POST["name"]
         email = request.POST["email"]
         message = request.POST["message"]
 
+        subject = "New Contact Form Message"
+
         full_message = f"""
-        Name: {name}
-        Email: {email}
-        Message: {message}
-        """
+Name: {name}
+Email: {email}
+
+Message:
+{message}
+"""
 
         send_mail(
+            subject,
             full_message,
             settings.EMAIL_HOST_USER,
             ["sm7399586@gmail.com"],

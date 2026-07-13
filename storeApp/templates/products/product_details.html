@@ -22,13 +22,19 @@
             <h1 class="fw-bold mb-2">{{ product.name }}</h1>
 
             <h3 class="text-secondary my-3">
-                ₦{{ product.price }}
+               <span class="text-warning">Price:</span> ₦{{ product.price }}
             </h3>
 
             <hr>
 
             <p>
-                {{ product.description }}
+               <span class="text-primary">Material:</span> {{ product.material }}
+            </p>
+            <p>
+                <span class="text-primary">Color:</span> {{ product.color }}
+            </p>
+            <p>
+                <span class="text-primary">Description:</span> {{ product.description }}
             </p>
 
             <div class="mt-4">

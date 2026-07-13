@@ -1,7 +1,13 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
+{% comment %} <div id="preloader"> 
+    <div class="spinner-border text-success" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div> {% endcomment %}
+
 <section class="hero">
+</div>
     <div class="hero-overlay">
         <div class="container">
 
@@ -50,7 +56,7 @@
             <!-- Sofa -->
             <div class="col-md-6 col-lg-4">
                 <div class="card category-card shadow-sm border-0 h-100">
-                    <img src="{% static 'categories-images/sofa.jpg' %}" class="card-img-top" alt="Sofas">
+                    <img src="{% static 'categories-images/sofa.webp' %}" class="card-img-top" alt="Sofas">
 
                     <div class="card-body text-center">
                         <h5 class="card-title">Sofas</h5>
@@ -64,7 +70,7 @@
             <!-- Beds -->
             <div class="col-md-6 col-lg-4">
                 <div class="card category-card shadow-sm border-0 h-100">
-                    <img src="{% static 'categories-images/bed.jpg' %}" class="card-img-top" alt="Beds">
+                    <img src="{% static 'categories-images/bed.webp' %}" class="card-img-top" alt="Beds">
 
                     <div class="card-body text-center">
                         <h5 class="card-title">Beds</h5>
@@ -78,7 +84,7 @@
             <!-- Dining -->
             <div class="col-md-6 col-lg-4">
                 <div class="card category-card shadow-sm border-0 h-100">
-                    <img src="{% static 'categories-images/dinning.jpg' %}" class="card-img-top" alt="Dining Sets">
+                    <img src="{% static 'categories-images/dinning.webp' %}" class="card-img-top" alt="Dining Sets">
 
                     <div class="card-body text-center">
                         <h5 class="card-title">Dining Sets</h5>
@@ -92,7 +98,7 @@
             <!-- Wardrobes -->
             <div class="col-md-6 col-lg-4">
                 <div class="card category-card shadow-sm border-0 h-100">
-                    <img src="{% static 'categories-images/wardrobe.jpg' %}" class="card-img-top" alt="Wardrobes">
+                    <img src="{% static 'categories-images/wardrobe.webp' %}" class="card-img-top" alt="Wardrobes">
 
                     <div class="card-body text-center">
                         <h5 class="card-title">Wardrobes</h5>
@@ -106,7 +112,7 @@
             <!-- TV Stands -->
             <div class="col-md-6 col-lg-4">
                 <div class="card category-card shadow-sm border-0 h-100">
-                    <img src="{% static 'categories-images/tv-stand.jpg' %}" class="card-img-top" alt="TV Stands">
+                    <img src="{% static 'categories-images/tv-stand.webp' %}" class="card-img-top" alt="TV Stands">
 
                     <div class="card-body text-center">
                         <h5 class="card-title">TV Stands</h5>
@@ -120,7 +126,7 @@
             <!-- Office -->
             <div class="col-md-6 col-lg-4">
                 <div class="card category-card shadow-sm border-0 h-100">
-                    <img src="{% static 'categories-images/office.jpg' %}" class="card-img-top" alt="Office Furniture">
+                    <img src="{% static 'categories-images/office.webp' %}" class="card-img-top" alt="Office Furniture">
 
                     <div class="card-body text-center">
                         <h5 class="card-title">Office Furniture</h5>
@@ -135,4 +141,5 @@
 
     </div>
 </section>
+<script src="{% static 'css/js/hero.js' %}"></script>
 {% endblock content %}
