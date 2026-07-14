@@ -139,12 +139,12 @@ def order_whatsapp(request):
         total += subtotal
 
         message += (
-            f"🪑 {product.name}\n"
+            f" {product.name}\n"
             f"Quantity: {quantity}\n"
             f"Price: ₦{subtotal:,.0f}\n\n"
         )
 
-    message += f"💰 Total: ₦{total:,.0f}\n\n"
+    message += f" Total: ₦{total:,.0f}\n\n"
     message += "Please let me know the availability. Thank you!"
 
     phone = "2348103189576" 

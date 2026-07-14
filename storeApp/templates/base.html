@@ -51,10 +51,13 @@
             class="form-control me-2 mb-2 mb-lg-0"
             type="search"
             name="q"
+            id="myText"
             placeholder="Search furniture..."
-            value="{{ request.GET.q }}"
           />
-          <buthrefn class="btn btn-outline-secondary mb-2 mb-lg-0" type="submit">Search</buthrefn>
+          <button 
+            class="btn btn-outline-secondary mb-2 mb-lg-0"
+            onclick="clearText()"
+          >Search</button>
         </form>
         <button
             class="navbar-toggler bg-white"
@@ -120,13 +123,15 @@
     <footer class="footer">
       <div class="footer-container">
         <div class="footer-left">
-          <img 
+          <a href="{% url 'hero' %}">
+              <img 
             src="{% static 'tools-image/logo-main.png' %}"
             alt="Logo"
             width="50"
             height="50"
             class="logo mb-2 logo-footer"
           >
+          </a>
           <p>Luxury Iteriors. Make Every Space Beautiful.</p>
         </div>
 
@@ -164,7 +169,7 @@
 
             <a href=""><i class="bi bi-instagram m-2 text-warning"></i></a>
 
-            <a href="https://wa.me/"
+            <a href="https://wa.me/2348103189576?text=Hello,%20Good%20King%20Osama."
               target="_blank"
               rel="noopener noreferrer"
             ><i class="bi bi-whatsapp m-2 text-success"></i></a>
